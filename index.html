@@ -17,19 +17,63 @@
         <h1>MARC Delimiter Fixer Tool</h1>
 
         <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Paste in MARC field data below and submit. Text
+            <label for="exampleFormControlTextarea1" class="form-label">Paste in MARC field data below with $/‡/ǂ subfield delimiters and submit. Text
                 will
-                appear formatted for every delimiter type I could think of when I made this: MarcEdit, Alma, OCLC, no delimiter, and em dash.</label>
+                appear formatted for every delimiter type I could think of when I made this: MarcEdit, Alma, OCLC, no
+                delimiter, and em dash.</label>
             <textarea class="form-control" id="marc-input" rows="3"></textarea>
         </div>
         <input class="btn btn-primary" type="submit" id="submit-button" value="Submit">
 
-        <p class="new-marc" id="new-marcedit"></p>
-        <p class="new-marc" id="new-alma"></p>
-        <p class="new-marc" id="new-oclc"></p>
-        <p class="new-marc" id="new-no"></p>
-        <p class="new-marc" id="new-emdash"></p>
+        <p class="new-marc" ></p>
+        <p class="new-marc" ></p>
+        <p class="new-marc" ></p>
+        <p class="new-marc"></p>
+        <p class="new-marc"></p>
 
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Delimiter</th>
+                    <th scope="col">System</th>
+                    <th scope="col">New Field Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>$</td>
+                    <td>MarcEdit, Minaret</td>
+                    <td class="new-marc" id="new-marcedit"></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>‡</td>
+                    <td>Alma</td>
+                    <td class="new-marc" id="new-alma"></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>ǂ</td>
+                    <td>OCLC</td>
+                    <td class="new-marc" id="new-oclc"></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>blank</td>
+                    <td>Human readable</td>
+                    <td class="new-marc" id="new-no"></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Em dash</td>
+                    <td>Classweb, VIAF</td>
+                    <td class="new-marc" id="new-emdash"></td>
+                </tr>
+            </tbody>
+        </table>
         <br>
         <br>
         <br>

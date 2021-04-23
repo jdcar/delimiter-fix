@@ -24,25 +24,23 @@ const delimiterChange = () => {
 
     const oldMarc = marcInput.val()
     const newMarcEdit = oldMarc.replaceAll(/\$|ǂ|‡/g, "$").trim()
-    const newOclcEdit = oldMarc.replaceAll(/\$|ǂ|‡/g, "ǂ").trim()
-    const newAlmaEdit = oldMarc.replaceAll(/\$|ǂ|‡/g, "‡").trim()
-    const newNoDelimiterEdit = oldMarc.replaceAll(/\$.|ǂ.|‡./g, "").replaceAll(/  /g, " ").trim()
-    const newEmdashEdit = oldMarc.replaceAll(/\$. |ǂ. |‡. /g, "—").replaceAll(/ —/g, "—").replace(/^—/, "").trim()
-
-
+    const newOclc = oldMarc.replaceAll(/\$|ǂ|‡/g, "ǂ").trim()
+    const newAlma = oldMarc.replaceAll(/\$|ǂ|‡/g, "‡").trim()
+    const newNoDelimiter = oldMarc.replaceAll(/\$.|ǂ.|‡./g, "").replaceAll(/  /g, " ").trim()
+    const newEmdash = oldMarc.replaceAll(/\$. |ǂ. |‡. /g, "—").replaceAll(/ —/g, "—").replace(/^—/, "").trim()
 
 
     console.log(newMarcEdit)
-    console.log(newOclcEdit)
-    console.log(newAlmaEdit)
-    console.log(newNoDelimiterEdit)
-    console.log(newEmdashEdit)
+    console.log(newOclc)
+    console.log(newAlma)
+    console.log(newNoDelimiter)
+    console.log(newEmdash)
 
     $('#new-marcedit').append(newMarcEdit)
-    $('#new-alma').append(newAlmaEdit)
-    $('#new-oclc').append(newOclcEdit)
-    $('#new-no').append(newNoDelimiterEdit)
-    $('#new-emdash').append(newEmdashEdit)
+    $('#new-alma').append(newAlma)
+    $('#new-oclc').append(newOclc)
+    $('#new-no').append(newNoDelimiter)
+    $('#new-emdash').append(newEmdash)
 
 
 }
