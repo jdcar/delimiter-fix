@@ -12,25 +12,39 @@
 </head>
 
 <body>
+    <div class="container">
 
-    <h1>MARC Delimiter Replace Tool</h1>
+        <h1>MARC Delimiter Replace Tool</h1>
 
-    <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Paste in MARC field data below and submit. Text will appear formatted for every delimiter type I could think of when I made this.</label>
-        <textarea class="form-control" id="marc-input" rows="3"></textarea>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Paste in MARC field data below and submit. Text
+                will
+                appear formatted for every delimiter type I could think of when I made this: MarcEdit, Alma, OCLC, no delimiter, and em dash.</label>
+            <textarea class="form-control" id="marc-input" rows="3"></textarea>
+        </div>
+        <input class="btn btn-primary" type="submit" id="submit-button" value="Submit">
+
+        <p class="new-marc" id="new-marcedit"></p>
+        <p class="new-marc" id="new-alma"></p>
+        <p class="new-marc" id="new-oclc"></p>
+        <p class="new-marc" id="new-no"></p>
+        <p class="new-marc" id="new-emdash"></p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <h2>Example</h2>
+        <p>Submitting "‡a New York, ‡b Crowell ‡c [1955]" will appear as:</p>
+        <p>$a New York, $b Crowell $c [1955]</p>
+        <p>‡a New York, ‡b Crowell ‡c [1955]</p>
+        <p>ǂa New York, ǂb Crowell ǂc [1955]</p>
+        <p>New York, Crowell [1955]</p>
+        <p>New York,—Crowell—[1955]</p>
+
     </div>
-    <input class="btn btn-primary" type="submit" id="submit-button" value="Submit">
-
-    <p class="new-marc" id="new-marcedit"></p>
-    <p class="new-marc" id="new-alma"></p>
-    <p class="new-marc" id="new-oclc"></p>
-    <p class="new-marc" id="new-no"></p>
-    <p class="new-marc" id="new-emdash"></p>
-
-
-
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
