@@ -23,13 +23,13 @@ const delimiterChange = () => {
     } 
 
     const oldMarc = marcInput.val()
-    const newMarcEdit = oldMarc.replaceAll(/\$[^\$]|\$\$|ǂ|‡|\|/g, "$").trim()
-    const newOclc = oldMarc.replaceAll(/\$[^\$]|\$\$|ǂ|‡|\|/g, "ǂ").trim()
-    const newAlma = oldMarc.replaceAll(/\$[^\$]|\$\$|ǂ|‡|\|/g, "‡").trim()
-    const newNoDelimiter = oldMarc.replaceAll(/\$[^\$]|\$\$.|ǂ.|‡.|\|./g, "").replaceAll(/  /g, " ").trim()
-    const newEmdash = oldMarc.replaceAll(/\$[^\$] |\$\$. |ǂ. |‡. |\|. /g, "—").replaceAll(/ —/g, "—").replace(/^—/, "").trim()
-    const newPipe = oldMarc.replaceAll(/\$[^\$]|\$\$|ǂ|‡|\|/g, "|").trim()
-    const newDoubleUSD = oldMarc.replaceAll(/\$[^\$]|\$\$|ǂ|‡|\|/g, "$$$").trim()
+    const newMarcEdit = oldMarc.replaceAll(/\$|\$\$|ǂ|‡|\|/g, "$").trim()
+    const newOclc = oldMarc.replaceAll(/\$]|\$\$|ǂ|‡|\|/g, "ǂ").trim()
+    const newAlma = oldMarc.replaceAll(/\$|\$\$|ǂ|‡|\|/g, "‡").trim()
+    const newNoDelimiter = oldMarc.replaceAll(/\$.|\$\$.|ǂ.|‡.|\|./g, " ").trim()
+    const newEmdash = oldMarc.replaceAll(/\$ |\$\$. |ǂ. |‡. |\|. /g, "—").replaceAll(/ —/g, "—").replace(/^—/, "").trim()
+    // const newPipe = oldMarc.replaceAll(/\$[^\$]|\$\$|ǂ|‡|\|/g, "|").trim()
+    // const newDoubleUSD = oldMarc.replaceAll(/\$[^\$]|\$\$|ǂ|‡|\|/g, "$$$").trim()
 
     
 
@@ -38,15 +38,15 @@ const delimiterChange = () => {
     console.log(newAlma)
     console.log(newNoDelimiter)
     console.log(newEmdash)
-    console.log(newDoubleUSD)
+    // console.log(newDoubleUSD)
 
     $('#new-marcedit').append(newMarcEdit)
     $('#new-alma').append(newAlma)
     $('#new-oclc').append(newOclc)
     $('#new-no').append(newNoDelimiter)
     $('#new-emdash').append(newEmdash)
-    $('#new-pipe').append(newPipe)
-    $('#new-double-usd').append(newDoubleUSD)
+    // $('#new-pipe').append(newPipe)
+    // $('#new-double-usd').append(newDoubleUSD)
 
 }
 
